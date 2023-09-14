@@ -1,6 +1,6 @@
 import axios from "axios"
 const darkwaveAPI = axios.create({
-  baseURL: "https://dark-wave-43082.botics.co",
+  baseURL: "https://napp-43082.botics.co",
   headers: { Accept: "application/json", "Content-Type": "application/json" }
 })
 function api_docs_schema_retrieve(payload) {
