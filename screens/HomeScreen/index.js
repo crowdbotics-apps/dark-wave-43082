@@ -34,7 +34,13 @@ const ScreenComponent = () => {
       </View>
     <Pressable onPress={() => {
       navigation.navigate("Fundraising");
-    }}><Text style={styles.lfZPNBpo}>{"fundraising"}</Text></Pressable></SafeAreaView>;
+    }}><Text style={styles.lfZPNBpo}>{"fundraising"}</Text></Pressable><Pressable onPress={() => {
+      navigation.navigate("InviteAFriendScreen");
+    }}><Text style={styles.HxxrhKvn}>{"invite friends"}</Text></Pressable><Pressable onPress={() => {
+      navigation.navigate("FriendList");
+    }}><Text style={styles.kiiVQnoS}>{"friend list"}</Text></Pressable><Pressable onPress={() => {
+      navigation.navigate("AccountSettingsScreen");
+    }}><Text style={styles.WBIWTGQQ}>{"settings"}</Text></Pressable></SafeAreaView>;
 };
 
 const styles = StyleSheet.create({
@@ -87,6 +93,27 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   lfZPNBpo: {
+    width: 100,
+    height: 50,
+    lineHeight: 14,
+    fontSize: 14,
+    borderRadius: 0
+  },
+  HxxrhKvn: {
+    width: 100,
+    height: 50,
+    lineHeight: 14,
+    fontSize: 14,
+    borderRadius: 0
+  },
+  kiiVQnoS: {
+    width: 100,
+    height: 50,
+    lineHeight: 14,
+    fontSize: 14,
+    borderRadius: 0
+  },
+  WBIWTGQQ: {
     width: 100,
     height: 50,
     lineHeight: 14,
