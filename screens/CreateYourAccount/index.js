@@ -1,24 +1,29 @@
+import { useNavigation } from "@react-navigation/native";
+import { Pressable } from "react-native";
 import React, { useState } from 'react';
 import { SafeAreaView, StyleSheet, TextInput, Button, View, Text, TouchableOpacity, CheckBox } from 'react-native';
 
 const SignUpScreen = () => {
+  const navigation = useNavigation();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [isSelected, setSelection] = useState(false);
   return <SafeAreaView style={styles.container}>
       <TextInput style={styles.input} onChangeText={setUsername} value={username} placeholder="Username" />
       <TextInput style={styles.input} onChangeText={setPassword} value={password} placeholder="Password" secureTextEntry />
-      <View style={styles.checkboxContainer}>
+      <Pressable><View style={styles.checkboxContainer}>
         <CheckBox value={isSelected} onValueChange={setSelection} style={styles.checkbox} />
         <Text style={styles.label}>I agree to the </Text>
-        <TouchableOpacity onPress={() => alert('Terms and Conditions')}>
+        <TouchableOpacity onPress={() => {
+          navigation.navigate("LegalAgreement");
+        }}>
           <Text style={styles.link}>Terms and Conditions</Text>
         </TouchableOpacity>
         <Text style={styles.label}> and </Text>
         <TouchableOpacity onPress={() => alert('Privacy Policy')}>
           <Text style={styles.link}>Privacy Policy</Text>
         </TouchableOpacity>
-      </View>
+      </View></Pressable>
       <Button title="Sign Up" onPress={() => alert('Sign Up Button Pressed')} />
     </SafeAreaView>;
 };
