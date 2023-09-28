@@ -1,14 +1,23 @@
+import { useNavigation } from "@react-navigation/native";
+import { Pressable } from "react-native";
 import React from 'react';
 import { SafeAreaView, StyleSheet, View, Text, Image, Button } from 'react-native';
 
 const ScreenComponent = () => {
+  const navigation = useNavigation();
   return <SafeAreaView style={styles.container}>
       <View style={styles.header}>
         <Image style={styles.profileImage} source={{
         uri: 'https://tinyurl.com/42evm3m3'
       }} />
         <Text style={styles.headerText}>Profile Settings</Text>
-      </View>
+      <Pressable onPress={() => {
+        navigation.navigate("ChangePassword");
+      }}><Text style={styles.eLqZCelm}>{"change password"}</Text></Pressable><Pressable onPress={() => {
+        navigation.navigate("LogOutPopUp");
+      }}><Text style={styles.PIqexTxH}>{"log out"}</Text></Pressable><Pressable onPress={() => {
+        navigation.navigate("NotificationSettingsScreen");
+      }}><Text style={styles.UCInbaNf}>{"notification screen"}</Text></Pressable><Text style={styles.MiAnjexF}>Lorem ipsum…</Text></View>
       <View style={styles.buttonContainer}>
         <Button title="Edit Profile" onPress={() => {}} />
         <Button title="Edit Payment" onPress={() => {}} />
@@ -50,6 +59,34 @@ const styles = StyleSheet.create({
     flex: 2,
     justifyContent: 'space-around',
     paddingHorizontal: 20
+  },
+  eLqZCelm: {
+    width: 100,
+    height: 50,
+    lineHeight: 14,
+    fontSize: 14,
+    borderRadius: 0
+  },
+  PIqexTxH: {
+    width: 100,
+    height: 50,
+    lineHeight: 14,
+    fontSize: 14,
+    borderRadius: 0
+  },
+  UCInbaNf: {
+    width: 100,
+    height: 50,
+    lineHeight: 14,
+    fontSize: 14,
+    borderRadius: 0
+  },
+  MiAnjexF: {
+    width: 100,
+    height: 50,
+    lineHeight: 14,
+    fontSize: 14,
+    borderRadius: 0
   }
 });
 export default ScreenComponent;
