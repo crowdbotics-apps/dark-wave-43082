@@ -20,7 +20,9 @@ const SignUpScreen = () => {
           <Text style={styles.link}>Terms and Conditions</Text>
         </TouchableOpacity>
         <Text style={styles.label}> and </Text>
-        <TouchableOpacity onPress={() => alert('Privacy Policy')}>
+        <TouchableOpacity onPress={() => {
+          navigation.navigate("PrivacyPolicy");
+        }}>
           <Text style={styles.link}>Privacy Policy</Text>
         </TouchableOpacity>
       </View></Pressable>
