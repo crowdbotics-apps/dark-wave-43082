@@ -1,7 +1,10 @@
+import { useNavigation } from "@react-navigation/native";
+import { Pressable } from "react-native";
 import React, { useState } from 'react';
 import { SafeAreaView, StyleSheet, View, Text, Image, TouchableOpacity } from 'react-native';
 
 const OnboardingScreen = () => {
+  const navigation = useNavigation();
   const [currentSlide, setCurrentSlide] = useState(0);
   const slides = [{
     image: 'https://tinyurl.com/42evm3m3',
@@ -33,14 +36,16 @@ const OnboardingScreen = () => {
       }} />
         <Text style={styles.text}>{slides[currentSlide].text}</Text>
       </View>
-      <View style={styles.buttons}>
+      <Pressable onPress={() => {
+      navigation.navigate("CreateYourAccount");
+    }}><View style={styles.buttons}>
         <TouchableOpacity style={styles.button} onPress={handlePrevious}>
           <Text style={styles.buttonText}>Previous</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.button} onPress={handleNext}>
           <Text style={styles.buttonText}>Next</Text>
         </TouchableOpacity>
-      </View>
+      </View></Pressable>
     </SafeAreaView>;
 };
 
