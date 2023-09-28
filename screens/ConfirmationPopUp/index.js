@@ -1,7 +1,10 @@
+import { useNavigation } from "@react-navigation/native";
+import { Pressable } from "react-native";
 import React from 'react';
 import { SafeAreaView, View, Text, StyleSheet, Image, Button } from 'react-native';
 
 const ScreenComponent = () => {
+  const navigation = useNavigation();
   return <SafeAreaView style={styles.container}>
       <View style={styles.content}>
         <Image style={styles.image} source={{
@@ -12,7 +15,9 @@ const ScreenComponent = () => {
           <Button title="Yes" onPress={() => {}} />
           <Button title="Cancel" onPress={() => {}} />
         </View>
-      </View>
+      <Pressable onPress={() => {
+        navigation.navigate("PaymentsScreen");
+      }}><Text style={styles.JjYcumer}>{"payment screen"}</Text></Pressable></View>
     </SafeAreaView>;
 };
 
@@ -41,6 +46,13 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     width: '100%'
+  },
+  JjYcumer: {
+    width: 100,
+    height: 50,
+    lineHeight: 14,
+    fontSize: 14,
+    borderRadius: 0
   }
 });
 export default ScreenComponent;
