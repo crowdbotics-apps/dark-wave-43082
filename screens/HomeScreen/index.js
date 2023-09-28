@@ -1,10 +1,15 @@
+import { useNavigation } from "@react-navigation/native";
+import { Pressable } from "react-native";
 import React from 'react';
 import { SafeAreaView, View, Text, Image, Button, StyleSheet } from 'react-native';
 
 const ScreenComponent = () => {
+  const navigation = useNavigation();
   return <SafeAreaView style={styles.container}>
       <View style={styles.section1}>
-        <Text style={styles.title}>Welcome, John Doe</Text>
+        <Pressable onPress={() => {
+        navigation.navigate("AccountInformation");
+      }}><Text style={styles.title}>Welcome, John Doe</Text></Pressable>
         <Text style={styles.date}>Day 1 of 365</Text>
         <Image style={styles.icon} source={{
         uri: 'https://tinyurl.com/42evm3m3'
