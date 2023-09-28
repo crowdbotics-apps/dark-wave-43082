@@ -1,16 +1,21 @@
+import { useNavigation } from "@react-navigation/native";
+import { Pressable } from "react-native";
 import React from 'react';
 import { SafeAreaView, StyleSheet, View, Text, Image, StatusBar } from 'react-native';
 
 const SplashScreen = () => {
+  const navigation = useNavigation();
   return <SafeAreaView style={styles.container}>
       <StatusBar barStyle="dark-content" />
-      <View style={styles.content}>
+      <Pressable onPress={() => {
+      navigation.navigate("OnboardingSlides");
+    }}><View style={styles.content}>
         <Image style={styles.logo} source={{
-        uri: 'https://tinyurl.com/42evm3m3'
-      }} />
+          uri: 'https://tinyurl.com/42evm3m3'
+        }} />
         <Text style={styles.title}>Welcome to Our App</Text>
         <Text style={styles.subtitle}>We're preparing everything for you...</Text>
-      </View>
+      </View></Pressable>
     </SafeAreaView>;
 };
 
