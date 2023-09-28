@@ -18,7 +18,9 @@ const LoginScreen = () => {
     }}>
         <Text style={styles.forgotPassword}>Forgot Password?</Text>
       </TouchableOpacity>
-      <TouchableOpacity onPress={() => console.log('Sign Up pressed')}>
+      <TouchableOpacity onPress={() => {
+      navigation.navigate("AccountInformation");
+    }}>
         <Text style={styles.signUp}>Don't have an account? Sign Up</Text>
       </TouchableOpacity>
     </SafeAreaView>;
