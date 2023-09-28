@@ -16,26 +16,26 @@ const PaymentHistoryScreen = () => {
     date: '2021-09-03 12:00',
     amount: 300
   }];
-  return <SafeAreaView style={_styles.uwMZbgZU}>
-      <ScrollView style={_styles.egReeypZ}>
-        <Text style={_styles.esMIBCaC}>Payment History</Text>
+  return <SafeAreaView style={_styles.aGFmnPdf}>
+      <ScrollView style={_styles.VxWulNMM}>
+        <Text style={_styles.JzvfzeYp}>Payment History</Text>
 
-        <View style={_styles.ImEOAIJG}>
-          <TextInput placeholder="From date" style={_styles.ACyKvRbv} />
-          <TextInput placeholder="To date" style={_styles.ATruleAe} />
+        <View style={_styles.PWkcQfwB}>
+          <TextInput placeholder="From date" style={_styles.QWkAmsJM} />
+          <TextInput placeholder="To date" style={_styles.mtKvJqFr} />
         </View>
 
         <Button title="Download" onPress={() => {}} />
 
-        {dummyData.map((item, index) => <View key={index} style={_styles.UsBjvXSk}>
-            <Text style={_styles.oEcLAbhq}>{item.payer}</Text>
-            <Text style={_styles.AXsQhhEE}>{item.date}</Text>
-            <Text style={_styles.VqQpfszd}>Amount: ${item.amount}</Text>
+        {dummyData.map((item, index) => <View key={index} style={_styles.DwjrJWkE}>
+            <Text style={_styles.AQGTzzOn}>{item.payer}</Text>
+            <Text style={_styles.QEYjEYkb}>{item.date}</Text>
+            <Text style={_styles.ABMcyyBQ}>Amount: ${item.amount}</Text>
             <Image source={{
           uri: 'https://tinyurl.com/42evm3m3'
-        }} style={_styles.MQiQnPbf} />
+        }} style={_styles.SAZBPahu} />
             <Button title="Download Receipt" onPress={() => {}} />
-            <Button title="Download Full Report" onPress={() => {}} style={_styles.WCZJGasE} />
+            <Button title="Download Full Report" onPress={() => {}} style={_styles.GamdpxRB} />
           </View>)}
       </ScrollView>
     </SafeAreaView>;
@@ -44,63 +44,63 @@ const PaymentHistoryScreen = () => {
 export default PaymentHistoryScreen;
 
 const _styles = StyleSheet.create({
-  uwMZbgZU: {
+  aGFmnPdf: {
     flex: 1,
     backgroundColor: "#fff"
   },
-  egReeypZ: {
+  VxWulNMM: {
     padding: 20
   },
-  esMIBCaC: {
+  JzvfzeYp: {
     fontSize: 24,
     fontWeight: "bold",
     marginBottom: 20
   },
-  ImEOAIJG: {
+  PWkcQfwB: {
     flexDirection: "row",
     justifyContent: "space-between",
     marginBottom: 20
   },
-  ACyKvRbv: {
+  QWkAmsJM: {
     borderWidth: 1,
     borderColor: "#ddd",
     padding: 10,
     flex: 1,
     marginRight: 10
   },
-  ATruleAe: {
+  mtKvJqFr: {
     borderWidth: 1,
     borderColor: "#ddd",
     padding: 10,
     flex: 1
   },
-  UsBjvXSk: {
+  DwjrJWkE: {
     borderWidth: 1,
     borderColor: "#ddd",
     borderRadius: 10,
     padding: 20,
     marginTop: 20
   },
-  oEcLAbhq: {
+  AQGTzzOn: {
     fontSize: 18,
     fontWeight: "bold"
   },
-  AXsQhhEE: {
+  QEYjEYkb: {
     fontSize: 16,
     color: "#888",
     marginBottom: 10
   },
-  VqQpfszd: {
+  ABMcyyBQ: {
     fontSize: 16,
     color: "#888",
     marginBottom: 10
   },
-  MQiQnPbf: {
+  SAZBPahu: {
     width: "100%",
     height: 200,
     marginBottom: 10
   },
-  WCZJGasE: {
+  GamdpxRB: {
     marginTop: 10
   }
 });
