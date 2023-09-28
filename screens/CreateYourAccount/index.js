@@ -27,7 +27,9 @@ const SignUpScreen = () => {
         </TouchableOpacity>
       </View></Pressable>
       <Button title="Sign Up" onPress={() => alert('Sign Up Button Pressed')} />
-    </SafeAreaView>;
+    <View style={styles.OLjAKkVM}><Pressable onPress={() => {
+        navigation.navigate("LoginScreen");
+      }}><Text style={styles.eXwZRtYe}>{"Login IN"}</Text></Pressable></View></SafeAreaView>;
 };
 
 const styles = StyleSheet.create({
@@ -56,6 +58,20 @@ const styles = StyleSheet.create({
   },
   link: {
     color: 'blue'
+  },
+  OLjAKkVM: {
+    height: 60,
+    width: 140,
+    backgroundColor: "#E4E4E4",
+    borderRadius: 0,
+    color: "#777777"
+  },
+  eXwZRtYe: {
+    width: 100,
+    height: 50,
+    lineHeight: 14,
+    fontSize: 14,
+    borderRadius: 0
   }
 });
 export default SignUpScreen;
