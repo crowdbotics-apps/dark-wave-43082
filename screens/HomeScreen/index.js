@@ -32,7 +32,9 @@ const ScreenComponent = () => {
         <Button title="Home" onPress={() => {}} />
         <Button title="Settings" onPress={() => {}} />
       </View>
-    </SafeAreaView>;
+    <Pressable onPress={() => {
+      navigation.navigate("Fundraising");
+    }}><Text style={styles.lfZPNBpo}>{"fundraising"}</Text></Pressable></SafeAreaView>;
 };
 
 const styles = StyleSheet.create({
@@ -83,6 +85,13 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'space-around',
     alignItems: 'center'
+  },
+  lfZPNBpo: {
+    width: 100,
+    height: 50,
+    lineHeight: 14,
+    fontSize: 14,
+    borderRadius: 0
   }
 });
 export default ScreenComponent;
